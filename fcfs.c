@@ -54,11 +54,6 @@ average_stats firstComeFirstServeNP(linkedList * processes) {
     processArr[0].end_time = processArr[0].expected_run_time;
     processArr[0].arrival_time = 0;
 
-//    // Initialisation
-//    for (int i = 1; i < processCount; i++) {
-//        processArr[i].arrival_time = rand() % 100;
-//    }
-
     //fcfs requests served based on arrival time.
     sort_by_arrival_time(processArr, processCount);
 
