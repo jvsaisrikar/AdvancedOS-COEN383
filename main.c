@@ -123,19 +123,19 @@ int main(int argc, char **argv)
 	printf("Average Response Time: %.1f\n", final[0].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[0].avg_wait_time);
 	printf("Average Turn Around Time: %.1f\n", final[0].avg_turnaround);
-	printf("Average Throughput: %.1f\n", final[0].avg_throughput);
+    printf("Average Throughput: %.1f processes per quanta unit of time\n", final[0].avg_throughput);
 	printf("\n");
 	printf("ALGORITHM: Round robin (RR) [preemptive]:\n");
 	printf("Average Response Time: %.1f\n", final[3].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[3].avg_wait_time);
 	printf("Average Turn Around Time: %.1f\n", final[3].avg_turnaround);
-	printf("Average Throughput: %.1f\n", final[3].avg_throughput);
+    printf("Average Throughput: %.1f processes per quanta unit of time\n", final[3].avg_throughput);
 	printf("\n");
 	printf("ALGORITHM: Shortest job first (SJF) [non-preemptive]:\n");
 	printf("Average Response Time: %.1f\n", final[1].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[1].avg_wait_time);
 	printf("Average Turn Around Time: %.1f\n", final[1].avg_turnaround);
-	printf("Average Throughput: %.1f\n", final[1].avg_throughput);
+    printf("Average Throughput: %.1f processes per quanta unit of time\n", final[1].avg_throughput);
 	printf("\n");
 	// printf("ALGORITHM: Shortest remaining time (SRT) [preemptive]:\n");
 	// printf("Average Response Time: %.1f\n", final[2].avg_response_time);
@@ -147,11 +147,11 @@ int main(int argc, char **argv)
 	printf("Average Response Time: %.1f\n", final[4].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[4].avg_wait_time);
 	printf("Average Turn Around Time: %.1f\n", final[4].avg_turnaround);
-	printf("Average Throughput: %.1f\n", final[4].avg_throughput);
+	printf("Average Throughput: %.1f processes per quanta unit of time\n", final[4].avg_throughput);
 	printf("\n");
 	printf("ALGORITHM: Highest priority first (HPF) [non-preemptive]:\n");
 	printf("Average Response Time: %.1f\n", final[5].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[5].avg_wait_time);
 	printf("Average Turn Around Time: %.1f\n", final[5].avg_turnaround);
-	printf("Average Throughput: %.1f\n", final[5].avg_throughput);
+    printf("Average Throughput: %.1f processes per quanta unit of time\n", final[5].avg_throughput);
 }
