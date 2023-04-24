@@ -50,7 +50,7 @@ typedef struct average_stats_s average_stats;
 
 average_stats firstComeFirstServeNP(linkedList * processes);
 average_stats shortestJobFirstNP(linkedList *processes);
-// average_stats shortestRemainingTimeP(linkedList * processes);
+average_stats shortestRemainingTimeP(linkedList * processes);
 average_stats roundRobinP(linkedList *processes, int time_slice);
 average_stats run_hpf_algorithm(int preemptive, linkedList *li);
 /*average_stats highestPriorityFirstP(linkedList * processes);

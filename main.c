@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 		// Shortest Job First
 		sjf[ctr] = shortestJobFirstNP(processList);
 		// Shortest Remaining Time First
-		// srf[ctr] = shortestRemainingTimeP(processList);
+		srf[ctr] = shortestRemainingTimeP(processList);
 		// Highest Priority First Preemptive
 		hpfp[ctr] = run_hpf_algorithm(1, processList);
 		// Highest Priority First Non-Preemptive
@@ -78,28 +78,28 @@ int main(int argc, char **argv)
 	{
 		final[0].avg_response_time += fcfs[i].avg_response_time;
 		final[1].avg_response_time += sjf[i].avg_response_time;
-		// final[2].avg_response_time += srf[i].avg_response_time;
+		final[2].avg_response_time += srf[i].avg_response_time;
 		final[3].avg_response_time += rr[i].avg_response_time;
 		final[4].avg_response_time += hpfp[i].avg_response_time;
 		final[5].avg_response_time += hpfnp[i].avg_response_time;
 
 		final[0].avg_wait_time += fcfs[i].avg_wait_time;
 		final[1].avg_wait_time += sjf[i].avg_wait_time;
-		// final[2].avg_wait_time += srf[i].avg_wait_time;
+		final[2].avg_wait_time += srf[i].avg_wait_time;
 		final[3].avg_wait_time += rr[i].avg_wait_time;
 		final[4].avg_wait_time += hpfp[i].avg_wait_time;
 		final[5].avg_wait_time += hpfnp[i].avg_wait_time;
 
 		final[0].avg_turnaround += fcfs[i].avg_turnaround;
 		final[1].avg_turnaround += sjf[i].avg_turnaround;
-		// final[2].avg_turnaround += srf[i].avg_turnaround;
+		final[2].avg_turnaround += srf[i].avg_turnaround;
 		final[3].avg_turnaround += rr[i].avg_turnaround;
 		final[4].avg_turnaround += hpfp[i].avg_turnaround;
 		final[5].avg_turnaround += hpfnp[i].avg_turnaround;
 
 		final[0].avg_throughput += fcfs[i].avg_throughput;
 		final[1].avg_throughput += sjf[i].avg_throughput;
-		// final[2].avg_throughput += srf[i].avg_throughput;
+		final[2].avg_throughput += srf[i].avg_throughput;
 		final[3].avg_throughput += rr[i].avg_throughput;
 		final[4].avg_throughput += hpfp[i].avg_throughput;
 		final[5].avg_throughput += hpfnp[i].avg_throughput;
@@ -137,12 +137,12 @@ int main(int argc, char **argv)
 	printf("Average Turn Around Time: %.1f\n", final[1].avg_turnaround);
     printf("Average Throughput: %.1f processes per quanta unit of time\n", final[1].avg_throughput);
 	printf("\n");
-	// printf("ALGORITHM: Shortest remaining time (SRT) [preemptive]:\n");
-	// printf("Average Response Time: %.1f\n", final[2].avg_response_time);
-	// printf("Average Wait Time: %.1f\n", final[2].avg_wait_time);
-	// printf("Average Turn Around Time: %.1f\n", final[2].avg_turnaround);
-	// printf("Average Throughput: %.1f\n", final[2].avg_throughput);
-	// printf("\n");
+	printf("ALGORITHM: Shortest remaining time (SRT) [preemptive]:\n");
+	printf("Average Response Time: %.1f\n", final[2].avg_response_time);
+	printf("Average Wait Time: %.1f\n", final[2].avg_wait_time);
+	printf("Average Turn Around Time: %.1f\n", final[2].avg_turnaround);
+	printf("Average Throughput: %.1f\n", final[2].avg_throughput);
+	printf("\n");
 	printf("ALGORITHM: Highest priority first (HPF) [preemptive]:\n");
 	printf("Average Response Time: %.1f\n", final[4].avg_response_time);
 	printf("Average Wait Time: %.1f\n", final[4].avg_wait_time);
