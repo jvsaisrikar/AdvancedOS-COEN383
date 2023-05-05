@@ -17,11 +17,11 @@ int *PGCoptn = malloc(sizeof(int)*4);
 
     void (*AlgoFunction)(LISTOFPAGES*);
     if (Argument1 != 2){
-        printf("*******Page Replacement Algo are: FCFS, LRU, LFU, MFU or Random.\n");
+        printf("*******Page Replacement Algo are: FIFO, LRU, LFU, MFU or Random.\n");
         return -1;
     }//checking which function to call
-    if(strcmp(Argument2[1], "FCFS") == 0){
-        AlgoFunction = FCFS_FUNCTION;
+    if(strcmp(Argument2[1], "FIFO") == 0){
+        AlgoFunction = FIFO_FUNCTION;
     }else if(strcmp(Argument2[1], "LRU") == 0){
         AlgoFunction = LRU_FUNCTION;
     }else if(strcmp(Argument2[1], "LFU") == 0){
@@ -32,7 +32,7 @@ int *PGCoptn = malloc(sizeof(int)*4);
         AlgoFunction = R_FUNCTION;
     }else {
 printf("####################################################################\n");
-        printf("These are the options to run for simulation : FCFS, LRU, LFU, MFU or Random.\n");
+        printf("These are the options to run for simulation : FIFO, LRU, LFU, MFU or Random.\n");
 printf("####################################################################\n");
 
         return -1;

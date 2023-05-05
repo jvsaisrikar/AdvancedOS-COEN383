@@ -1,6 +1,6 @@
 #include "PAGE.h"
-   //FCFS algorithm
-void FCFS_FUNCTION(LISTOFPAGES* plFCFS) {
+   //FIFO algorithm
+void FIFO_FUNCTION(LISTOFPAGES* plFCFS) {
     page* PITFCF = plFCFS->HDL;
     page* PG_FCFFSEVICtion = plFCFS->HDL;
     while(PITFCF) {
