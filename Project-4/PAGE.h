@@ -55,7 +55,7 @@ int CMP_ARRtime(const void* ,const void*);
 // Pagesid who are free
 page* IDwhozPGrFree(LISTOFPAGES*,int,int);
 
-void FCFS_FUNCTION(LISTOFPAGES*);
+void FIFO_FUNCTION(LISTOFPAGES*);
 void LRU_FUNCTION(LISTOFPAGES*);
 void LFU_FUNCTION(LISTOFPAGES*);
 void MFU_FUNCTION(LISTOFPAGES*);
