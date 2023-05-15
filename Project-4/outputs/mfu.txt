@@ -15361,4 +15361,6 @@ Page::: 1 for process 108 brought in at 59.799999
 ####################################################################
 Process id 54 is done. Memory is getting free ... 
 ####################################################################
+Page hit rate: 78.94%
+Page miss rate: 21.06%
 Average number of processes that were successfully swapped in 1088

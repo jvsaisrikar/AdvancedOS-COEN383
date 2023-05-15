@@ -10395,4 +10395,6 @@ Process id 62 is done. Memory is getting free ...
 ####################################################################
 Process id 134 is done. Memory is getting free ... 
 ####################################################################
+Page hit rate: 79.87%
+Page miss rate: 20.13%
 Average number of processes that were successfully swapped in 1041
