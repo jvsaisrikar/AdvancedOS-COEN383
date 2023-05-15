@@ -3,6 +3,8 @@
 int main(int Argument1, char* Argument2[]) {
 
     int TimeStamp = 0;/// simulator timestamp
+    int pageHits = 0;
+    int pageMisses = 0;
 
 //paging options
 int *PGCoptn = malloc(sizeof(int)*4);
@@ -28,11 +30,11 @@ int *PGCoptn = malloc(sizeof(int)*4);
         AlgoFunction = LFU_FUNCTION;
     }else if(strcmp(Argument2[1], "MFU") == 0){
         AlgoFunction = MFU_FUNCTION;
-    }else if(strcmp(Argument2[1], "Random") == 0){
+    }else if(strcmp(Argument2[1], "RANDOM") == 0){
         AlgoFunction = R_FUNCTION;
     }else {
 printf("####################################################################\n");
-        printf("These are the options to run for simulation : FIFO, LRU, LFU, MFU or Random.\n");
+        printf("These are the options to run for simulation : FIFO, LRU, LFU, MFU or RANDOM.\n");
 printf("####################################################################\n");
 
         return -1;
@@ -93,10 +95,15 @@ printf("####################################################################\n")
 
                         Page_pointer->CNTER++;
                         Page_pointer->LONE = TimeStamp;
+                        
+                        // page hit
+                        pageHits++;
                         continue;
                     }
 
                     // if we are here then that means we refered a page which is not there in memory. So we need to bring it in.
+                    // page miss
+                    pageMisses++;
 
                     page* pageeeg = PAGEfrreeeg(&pl);
                     if(!pageeeg) {
@@ -135,5 +142,9 @@ printf("####################################################################\n")
         }
     }
 
+    // ...
+
+    printf("Page hit rate: %.2f%%\n", ((float)pageHits / (pageHits + pageMisses)) * 100);
+    printf("Page miss rate: %.2f%%\n", ((float)pageMisses / (pageHits + pageMisses)) * 100);
     printf("Average number of processes that were successfully swapped in %d\n", (swappingInProcess / 5));
 }
